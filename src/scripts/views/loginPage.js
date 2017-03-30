@@ -17,6 +17,19 @@ var LoginView = React.createClass({
 })
 
 var LoginForm = React.createClass({
+
+	_handleSubmit: function(evtObj) {
+		evtObj.preventDefault()
+		var formEl = evtObj.target
+		var formData = {
+			email: formEl.email.value,
+			password: formEl.password.value
+		}
+		console.log(formData)
+		formEl.reset()
+		ACTIONS.loginUser(formData)
+	},
+
 	render: function() {
 		return (
 			<div className='form-wrapper login-form'>
