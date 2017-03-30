@@ -5,7 +5,13 @@ import init from './init'
 
 
 const app = function() {
-  document.querySelector('.container').innerHTML = `<h1>IronPong</h1>`
+  PongRouter = Backbone.Router.extend({
+    routes:{
+
+    }
+  })
+  new PongRouter
+  Backbone.history.extend()
 }
 
 // x..x..x..x..x..x..x..x..x..x..x..x..x..x..x..x..
