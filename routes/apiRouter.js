@@ -4,6 +4,7 @@ let helpers = require('../config/helpers.js')
 
 let User = require('../db/schema.js').User
 let Game = require('../db/schema').Game
+let Queue = require('../db/schema').Queue
 
   
   apiRouter
@@ -64,7 +65,16 @@ apiRouter.get('/games', function(req, res){
     res.json(results)
   })
 })
-    
 
+//--------------------------------------------------------
+//                ROUTE FOR QUEUE
+//--------------------------------------------------------
+
+apiRouter.get('/queue', function(req, res) {
+  Queue.find(req.query, "-password", function(err, record){
+    if(err) return res.status(400).json(`Problem getting queue from database`)
+    res.json(record)
+  }).populate('members')
+})
 
 module.exports = apiRouter
