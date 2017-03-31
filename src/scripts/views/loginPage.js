@@ -1,11 +1,13 @@
 import React from 'react'
 import ACTIONS from '../actions.js'
 import STORE from '../store.js'
+import NavBar from './components/navBar'
 
 var LoginView = React.createClass({
 	render: function() {
 		return (
 			<div className='login-page-wrapper'>
+				<NavBar />
 				<RegisterForm />
 				<LoginForm />
 			</div>
