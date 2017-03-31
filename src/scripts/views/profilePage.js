@@ -8,7 +8,9 @@ var ProfilePage = React.createClass({
 	componentWillMount: function(){
 
 		//fetch the user info collection
-		this.setState(STORE.data)
+		//this.setState(STORE.data)
+		//dumby data:
+
 
 	},
 
@@ -23,6 +25,10 @@ var ProfilePage = React.createClass({
 		return(
 
 			<div className = 'profile-page-wrapper'>
+
+				<Avatar />
+
+				<UserInfo info = {this.state.statsCollection}/>
 
 				<StatsComponent stats = {this.state.statsCollection}/>	
 
@@ -56,7 +62,9 @@ var StatsComponent = React.createClass({
 		return(
 
 			<div className = 'profile-page-wrapper'>
+
 				<NavBar />
+				
 			</div>
 
 		)

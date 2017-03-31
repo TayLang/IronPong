@@ -63,9 +63,9 @@ var RegisterForm = React.createClass({
 			<div className='form-wrapper register-form'>
 			<h2>Register Form</h2>
 			<form onSubmit={this._handleSubmit}>
-				<input type='text' name='userName' placeholder='enter username' />
-				<input type='text' name='email' placeholder='enter your email' />
-				<input type='password' name='password' placeholder='create password' />
+				<input type="text" name='userName' placeholder='enter username' />
+				<input type="text" name='email' placeholder='enter your email' />
+				<input type="password" name='password' placeholder='create password' />
 				<button type='submit'>Register</button>
 			</form>
 			</div>

@@ -67,6 +67,17 @@ p {
 
 }
 
+.nav-bar-wrapper{
+
+	background: $colorDarkest;
+	a{	
+		
+		font-size: $fontSizeBody;
+		color: $colorOverDark;
+		padding: .5rem;
+	}
+}
+
 .home-page-wrapper{		
 
 	background: $colorBase;
@@ -76,6 +87,10 @@ p {
 
 
 .login-page-wrapper{
+
+	input{
+		font-size: 10px;
+	}
 
 	background: $colorBase;
 
