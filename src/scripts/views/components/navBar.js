@@ -2,9 +2,9 @@ import React from 'react'
 import ACTIONS from '../../actions'
 
 var NavBar = React.createClass({
-	handleLogout: function() {
-			ACTIONS.logoutUser()
-		},
+	handleLogout: function () {
+		ACTIONS.logoutUser()
+	},
 	render: function() {
 		return(
 			<div className='navBar'>
