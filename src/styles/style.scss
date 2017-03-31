@@ -1,10 +1,81 @@
 * {
-	font-family: Helvetica, Arial, sans-serif;
+
+	font-family: 'Merriweather', serif;
 	box-sizing: border-box;
+	font-size: 16px;
+
+	$main-font: 'Merriweather', serif;
+	$font-size-heading: 1.875rem;
+	$font-size-title: 1.5rem;
+	$font-size-subtitle: 1.125rem;
+	$font-size-body: 0.875rem;
+	$color-darkest: #233139;
+	$color-base: #727d84;
+	$color-callout: #6fbbb7;
+	$color-text-over-dark: white;
+	$color-text-over-light: $color-darkest;
+
 }
 
-h1 {
-	font-size: 300px;
-	text-align: center;
-	color: fuchsia;
+/*heading text*/
+h2 {
+	
+	font-size: $font-size-heading;
+	font-family: $main-font;
+
+}
+
+/*title text*/
+h3 {
+	
+	font-size: $font-size-title;
+	font-family: $main-font;
+
+}
+
+/*subtitle text*/
+h4 {
+
+	font-size: $font-size-subtitle;
+	font-family: $main-font;
+	font-style: italic;
+
+}
+
+/*body text*/
+p {
+	
+	font-size: $font-size-body;
+	font-family: $main-font;
+
+}
+
+/*HOME PAGE*/
+.home-page-wrapper{
+
+}
+
+/*LOGIN PAGE*/
+.login-page-wrapper{
+
+}
+
+/*PROFILE PAGE*/
+.profile-page-wrapper{
+
+}
+
+/*QUEUE PAGE*/
+.queue-page-wrapper{
+
+}
+
+/*LEADERBOARD PAGE*/
+.leaderboard-page-wrapper{
+
+}
+
+/*CREATE GAME PAGE*/
+.create-game-page-wrapper{
+
 }
