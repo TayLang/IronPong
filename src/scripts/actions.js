@@ -44,6 +44,16 @@ const ACTIONS = {
 				function(error) {
 					console.log(error)
 				})
+	},
+
+	fetchUsers: function() {
+		var userColl = STORE.get('userCollection')
+		userColl.fetch()
+			.then(function() {
+				STORE.set({
+					userCollection: userColl
+				})
+			})
 	}
 
 }
