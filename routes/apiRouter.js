@@ -3,6 +3,7 @@ const apiRouter = Router()
 let helpers = require('../config/helpers.js')
 
 let User = require('../db/schema.js').User
+let Game = require('../db/schema').Game
 
   
   apiRouter
@@ -45,8 +46,18 @@ let User = require('../db/schema.js').User
       })  
     })
 
-    // Routes for a Model(resource) should have this structure
-GIT FUCKED
+//---------------------------------------------------------
+//                   ROUTES FOR GAME
+//---------------------------------------------------------
+
+apiRouter.post('/games', function(req, res) {
+  let newGame = new Game(req.body)
+  newGame.save((err, record) => {
+    if(err) return res.status(500).json(`Problem saving game to database`)
+    res.json(record)
+  })
+})
+
     
 
 

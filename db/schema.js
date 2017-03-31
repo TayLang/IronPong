@@ -4,7 +4,6 @@ const mongoose = require('mongoose');
 // USERS
 // ----------------------
 const usersSchema = new mongoose.Schema({
-  // required for authentication: DO NOT TOUCH Or You May Get Punched
   email:     { type: String, required: true },
   password:  { type: String, required: true },
   // x..x..x..x..x..x..x..x..x..x..x..x..x..x..x..x..x..x..x..x..x..x
@@ -37,6 +36,7 @@ const gameSchema = new mongoose.Schema({
 })
 
 const queueSchema = new mongoose.Schema({
+
 	members: [{
 		type: mongoose.Schema.Types.ObjectId,
 		ref: 'User'
@@ -45,5 +45,7 @@ const queueSchema = new mongoose.Schema({
 
 module.exports = {
   User: mongoose.model('User', usersSchema),
-  Game: mongoose.model('Game', gameSchema)
+  Game: mongoose.model('Game', gameSchema),
+  Queue: mongoose.model('Queue', queueSchema),
 }
+
