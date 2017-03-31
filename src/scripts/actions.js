@@ -4,6 +4,7 @@ import User from './models/userModel.js'
 const ACTIONS = {
 
 	registerUser: function(formData) {
+			if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(formData.email)) {
 		User.register(formData)
 			.done(
 				function(response) {
@@ -16,6 +17,9 @@ const ACTIONS = {
 					console.log('register fail', error)
 				}
 				)
+		} else {
+			document.querySelector('.emailRejection').innerHTML = ' Invalid email address'
+		}
 	},
 
 	loginUser: function(email, password) {
