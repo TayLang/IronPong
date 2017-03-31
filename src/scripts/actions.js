@@ -37,12 +37,12 @@ const ACTIONS = {
 		User.logout()
 			.done(
 				function(response) {
-					console.log(response)
+					console.log('you logged out', response)
 					location.hash = 'login'
 				})
 			.fail(
 				function(error) {
-					console.log(error)
+					console.log('problem logging out', error)
 				})
 	}
 
