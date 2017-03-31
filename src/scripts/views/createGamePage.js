@@ -6,7 +6,7 @@ var CreateGamePage = React.createClass({
 
 	render: function(){
 
-		return(<div className = ''>testing the create game page</div>)
+		return(<div className = 'create-game-page-wrapper'>testing the create game page</div>)
 
 	}
 

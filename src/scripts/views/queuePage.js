@@ -6,7 +6,7 @@ var QueuePage = React.createClass({
 
 	render: function(){
 
-		return(<div className = ''>testing queue page</div>)
+		return(<div className = 'queue-page-wrapper'>testing queue page</div>)
 
 	}
 

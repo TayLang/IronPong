@@ -4,78 +4,79 @@
 	box-sizing: border-box;
 	font-size: 16px;
 
-	$main-font: 'Merriweather', serif;
-	$font-size-heading: 1.875rem;
-	$font-size-title: 1.5rem;
-	$font-size-subtitle: 1.125rem;
-	$font-size-body: 0.875rem;
-	$color-darkest: #233139;
-	$color-base: #727d84;
-	$color-callout: #6fbbb7;
-	$color-text-over-dark: white;
-	$color-text-over-light: $color-darkest;
-
 }
 
-/*heading text*/
+$mainFont: 'Merriweather', serif;
+$fontSizeHeading: 1.875rem;
+$fontSizeTitle: 1.5rem;
+$fontSizeSubtitle: 1.125rem;
+$fontSizeBody: 0.875rem;
+$colorDarkest: #233139;
+$colorBase: #727d84;
+$colorCallout: #6fbbb7;
+$colorTextOverDark: white;
+
 h2 {
-	
-	font-size: $font-size-heading;
-	font-family: $main-font;
+
+	font-size: $fontSizeHeading;
+	font-family: $mainFont;
 
 }
 
-/*title text*/
 h3 {
 	
-	font-size: $font-size-title;
-	font-family: $main-font;
+	font-size: $fontSizeTitle;
+	font-family: $mainFont;
 
 }
 
-/*subtitle text*/
 h4 {
 
-	font-size: $font-size-subtitle;
-	font-family: $main-font;
+	font-size: $fontSizeSubtitle;
+	font-family: $mainFont;
 	font-style: italic;
 
 }
 
-/*body text*/
 p {
 	
-	font-size: $font-size-body;
-	font-family: $main-font;
+	font-size: $fontSizeBody;
+	font-family: $mainFont;
 
 }
 
-/*HOME PAGE*/
-.home-page-wrapper{
+.home-page-wrapper{		
 
-}
+	background: $colorBase;
 
-/*LOGIN PAGE*/
+	}
+
 .login-page-wrapper{
 
-}
+	background: $colorBase;
 
-/*PROFILE PAGE*/
+	}
+
 .profile-page-wrapper{
 
-}
+	background: $colorBase;
 
-/*QUEUE PAGE*/
+	}
+
 .queue-page-wrapper{
 
-}
+	background: $colorBase;
 
-/*LEADERBOARD PAGE*/
+	}
+
 .leaderboard-page-wrapper{
 
-}
+	background: $colorBase;
 
-/*CREATE GAME PAGE*/
+	}
+
 .create-game-page-wrapper{
 
-}
+	background: $colorBase;
+
+	}
