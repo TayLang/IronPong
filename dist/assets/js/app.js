@@ -1,1 +1,0 @@
-console.error("SyntaxError: /Users/hankholcomb/Documents/TheIronYard/IronPong/src/scripts/views/leaderboardPage.js: Unexpected token (32:2) while parsing file: /Users/hankholcomb/Documents/TheIronYard/IronPong/src/scripts/views/leaderboardPage.js");
