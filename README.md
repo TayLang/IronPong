@@ -35,17 +35,26 @@ Add additional notes about how to deploy this on a live system
 
 ## Contributing
 
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
-
 ## Versioning
 
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
 
-## Authors
+## Team
 
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
+* **Patrick Hildreth** - [colonelrascals](https://github.com/colonelrascals)
+* **Anthony Buncio** - [AnthonyBuncio](https://github.com/AnthonyBuncio)
+* **Denis Bozzato** - [DBozz](https://github.com/DBozz)
+* **Hank Holcomb** - [HankH18](https://github.com/HankH18)
+* **James J Sewell** - [jamesjsewell](https://github.com/jamesjsewell)
+* **Leon Ikpo** - [likpo5710](https://github.com/likpo5710)
+* **Laurent Nocca** - [ljnocca](https://github.com/ljnocca)
+* **Kenji Hirabayashi** - [mkhira2](https://github.com/mkhira2)
+* **Reggie Evans** - [ReggEvans](https://github.com/ReggEvans)
+* **Sam Evers** - [sam123evers](https://github.com/sam123evers)
+* **Taylor Lang** - [TayLang](https://github.com/TayLang)
+* **Sean Wyse** - [wysesean](https://github.com/wysesean)
 
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
+
+
 
 ## License
 
