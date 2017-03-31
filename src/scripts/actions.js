@@ -17,8 +17,8 @@ const ACTIONS = {
 				)
 	},
 
-	loginUser: function() {
-		User.login(email, password) 
+	loginUser: function(formData) {
+		User.login(formData.email, formData.password) 
 			.done(
 				function(response){
 					console.log(response)
@@ -30,6 +30,19 @@ const ACTIONS = {
 					console.log(error)
 				}
 				)
+	},
+
+	logoutUser: function() {
+		User.logout()
+			.done(
+				function(response) {
+					console.log(response)
+					location.hash = 'login'
+				})
+			.fail(
+				function(error) {
+					console.log(error)
+				})
 	}
 
 }
