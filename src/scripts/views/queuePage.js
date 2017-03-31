@@ -4,7 +4,7 @@ var QueuePage = React.createClass({
 
 	render: function(){
 
-		return(<div className = ''>dsadassad<div>)
+		return(<div className = ''>dsadassad</div>)
 
 	}
 

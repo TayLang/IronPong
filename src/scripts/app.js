@@ -24,7 +24,7 @@ const app = function() {
   	})
 
   new PongRouter
-  Backbone.history.extend()
+  Backbone.history.start()
 
 }
 
