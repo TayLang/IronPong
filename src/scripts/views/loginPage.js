@@ -5,7 +5,7 @@ import STORE from '../store.js'
 var LoginView = React.createClass({
 	render: function() {
 		return (
-			<div className='loginView'>
+			<div className='login-page-wrapper'>
 				<RegisterForm />
 				<LoginForm />
 			</div>
