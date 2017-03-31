@@ -23,7 +23,7 @@ var LoginForm = React.createClass({
 			password: formEl.password.value
 		}
 		formEl.reset()
-		ACTIONS.loginUser(formData)
+		ACTIONS.loginUser(formEl.email.value, formEl.password.value)
 	},
 
 	render: function() {
