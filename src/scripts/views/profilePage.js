@@ -23,7 +23,7 @@ var ProfilePage = React.createClass({
 
 			<div className = 'profile-page-wrapper'>
 
-				<Stats />	
+				<StatsComponent stats = {this.state.statsCollection}/>	
 
 			</div>
 
@@ -33,7 +33,22 @@ var ProfilePage = React.createClass({
 
 })
 
-var Stats = React.createClass({
+var StatsComponent = React.createClass({
+
+	_makeStats: function(stats){
+
+		var statsArray = []
+
+		for(var i = 0; i < stats.length; i++){
+
+			var theStat = stats[i]
+
+			statsArray.push(<SingleStatComponent stat = {theStat} />)
+		}
+
+		return(statsArray)
+
+	},
 
 	render: function(){
 
@@ -41,7 +56,28 @@ var Stats = React.createClass({
 
 			<div className = 'stats-wrapper'>
 
+				{this._makeStats(this.props.stats)}
 
+			</div>
+
+		)
+
+	}
+
+})
+
+var SingleStatComponent = React.createClass({
+
+	render: function(){
+
+		var stat = this.props.stat
+
+		return(
+
+			<div className = "single-stat-wrapper">
+
+				<h3>wins</h3>
+				<h4>{stat.wins}</h4>
 
 			</div>
 
