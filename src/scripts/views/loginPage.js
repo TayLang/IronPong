@@ -34,7 +34,8 @@ var LoginForm = React.createClass({
 			<div className='form-wrapper login-form'>
 				<h2>Login Form</h2>
 				<form onSubmit={this._handleSubmit}>
-					<input type='text' name='email' placeholder='enter your email' /><br /><br />
+					<input type='text' name='email' placeholder='enter your email' />
+					<span className='loginEmailRejection emailRejection'></span><br /><br />
 					<input type='password' name='password' placeholder='enter password' /><br /><br />
 					<button type='submit'>Login</button>
 				</form>
@@ -65,7 +66,7 @@ var RegisterForm = React.createClass({
 			<form onSubmit={this._handleSubmit}>
 				<input type='text' name='userName' placeholder='enter username' /><br /><br />
 				<input type='text' name='email' placeholder='enter your email' />
-				<span className='emailRejection'></span><br /><br />
+				<span className='registerEmailRejection emailRejection'></span><br /><br />
 				<input type='password' name='password' placeholder='create a password' /><br /><br />
 				<button type='submit'>Register</button>
 			</form>

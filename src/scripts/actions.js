@@ -18,11 +18,12 @@ const ACTIONS = {
 				}
 				)
 		} else {
-			document.querySelector('.emailRejection').innerHTML = ' Invalid email address'
+			document.querySelector('.registerEmailRejection').innerHTML = ' Invalid email address'
 		}
 	},
 
 	loginUser: function(email, password) {
+		if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)) {
 		User.login(email, password) 
 			.done(
 				function(response){
@@ -35,6 +36,9 @@ const ACTIONS = {
 					console.log('login fail', error)
 				}
 				)
+		} else {
+			document.querySelector('.loginEmailRejection').innerHTML = ' Invalid email address'
+		}
 	},
 
 	logoutUser: function() {
