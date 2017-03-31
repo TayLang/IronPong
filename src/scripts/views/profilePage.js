@@ -6,7 +6,7 @@ var ProfilePage = React.createClass({
 
 	render: function(){
 
-		return(<div className = ''>testing profile page</div>)
+		return(<div className = 'profile-page-wrapper'>testing profile page</div>)
 
 	}
 

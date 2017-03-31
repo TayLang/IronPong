@@ -6,7 +6,7 @@ var HomePage = React.createClass({
 
 	render: function(){
 
-		return(<div className = ''>
+		return(<div className = 'home-page-wrapper'>
 
 			<h2>this is a title</h2>
 			<h3>this is a subtitle</h3>
