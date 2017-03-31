@@ -21,11 +21,12 @@ var LoginForm = React.createClass({
 		evtObj.preventDefault()
 		var formEl = evtObj.target
 		var formData = {
-			email: formEl.email.value,
-			password: formEl.password.value
+			email: formEl.email.value.toString(),
+			password: formEl.password.value.toString()
 		}
-		formEl.reset()
+		console.log(formEl)
 		ACTIONS.loginUser(formEl.email.value, formEl.password.value)
+		formEl.reset()
 	},
 
 	render: function() {
@@ -34,7 +35,8 @@ var LoginForm = React.createClass({
 				<h2>Login Form</h2>
 				<form onSubmit={this._handleSubmit}>
 					<input type='text' name='email' placeholder='enter your email' />
-					<input type='password' name='password' placeholder='create password' />
+					<span className='loginEmailRejection emailRejection'></span><br /><br />
+					<input type='password' name='password' placeholder='enter password' /><br /><br />
 					<button type='submit'>Login</button>
 				</form>
 			</div>
@@ -53,7 +55,6 @@ var RegisterForm = React.createClass({
 			email: formEl.email.value,
 			password: formEl.password.value
 		}
-		console.log(formData)
 		ACTIONS.registerUser(formData)
 		formEl.reset()
 	},
@@ -63,9 +64,10 @@ var RegisterForm = React.createClass({
 			<div className='form-wrapper register-form'>
 			<h2>Register Form</h2>
 			<form onSubmit={this._handleSubmit}>
-				<input type='text' name='userName' placeholder='enter username' />
+				<input type='text' name='userName' placeholder='enter username' /><br /><br />
 				<input type='text' name='email' placeholder='enter your email' />
-				<input type='password' name='password' placeholder='create password' />
+				<span className='registerEmailRejection emailRejection'></span><br /><br />
+				<input type='password' name='password' placeholder='create a password' /><br /><br />
 				<button type='submit'>Register</button>
 			</form>
 			</div>
