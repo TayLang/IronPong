@@ -10,7 +10,7 @@ const usersSchema = new mongoose.Schema({
   // x..x..x..x..x..x..x..x..x..x..x..x..x..x..x..x..x..x..x..x..x..x
   
    // example of optional fields
-  nickName: {type: String, required: true},
+  nickName: {type: String},
   createdAt: { type: Date, default: Date.now },
   wins: {type: Number},
   losses: {type: Number},

@@ -52,8 +52,8 @@ var RegisterForm = React.createClass({
 			password: formEl.password.value
 		}
 		console.log(formData)
-		formEl.reset()
 		ACTIONS.registerUser(formData)
+		formEl.reset()
 	},
 
 	render: function() {
