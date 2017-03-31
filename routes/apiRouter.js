@@ -57,6 +57,13 @@ apiRouter.post('/games', function(req, res) {
     res.json(record)
   })
 })
+
+apiRouter.get('/games', function(req, res){
+  Game.find(req.query, function(err, results){
+    if(err) return res.status(400).json(`Problem getting games from database`) 
+    res.json(results)
+  })
+})
     
 
 
