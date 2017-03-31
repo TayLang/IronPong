@@ -2,14 +2,14 @@ import React from 'react'
 import ACTIONS from '../actions.js'
 import STORE from '../store.js'
 
-var QueuePage = React.createClass({
+var HomePage = React.createClass({
 
 	render: function(){
 
-		return(<div className = ''>testing queue page</div>)
+		return(<div className = ''>testing home page</div>)
 
 	}
 
 })
 
-export default QueuePage
+export default HomePage

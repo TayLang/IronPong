@@ -1,9 +1,6 @@
-// TO DO:
-
-	// import ACTIONS on this page
-	// import this page on app.js 
-
 import React from 'react'
+import ACTIONS from '../actions.js'
+import STORE from '../store.js'
 
 var LoginView = React.createClass({
 	render: function() {

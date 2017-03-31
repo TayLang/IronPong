@@ -2,7 +2,14 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import Backbone from 'backbone'
 import init from './init'
+
+//Pages imports
+import HomePage from './views/homepage.js'
+import LoginPage from './views/loginpage.js'
+import ProfilePage from './views/profilepage.js'
+import CreateGamePage from './views/creategamepage.js'
 import QueuePage from './views/queuepage.js'
+import LeaderboardPage from './views/leaderboardpage.js'
 
 
 const app = function() {
@@ -11,20 +18,61 @@ const app = function() {
 
 	    routes: {
 
-	    	'queue': 'renderQueuePage'
+	    	'home': 'renderHomePage',
+	    	'queue': 'renderQueuePage',
+	    	'login/:id': 'renderLoginPage',
+	    	'profile/:id': 'renderProfilePage',
+	    	'leaderboard': 'renderLeaderboardPage',
+	    	'create_game': 'renderCreateGamePage',
+	    	'*default': 'handleRedirect',
 
 	    },
 
+	    handleRedirect: function(){
+
+	    	location.hash = "home"
+
+	    },
+
+	    renderHomePage: function(){
+
+	    	ReactDOM.render(<HomePage />, document.querySelector('.container'))
+
+	    },
+
+	    renderLoginPage: function(){
+
+	    	ReactDOM.render(<LoginPage />, document.querySelector('.container'))
+
+	    },
+
+	    renderProfilePage: function(id){
+
+    		ReactDOM.render(<ProfilePage />, document.querySelector('.container'))
+
+    	},
+
+    	renderCreateGamePage: function(){
+
+    		ReactDOM.render(<CreateGamePage />, document.querySelector('.container'))
+    	},
+
     	renderQueuePage: function(){
 
-    		<QueuePage />
+    		ReactDOM.render(<QueuePage />, document.querySelector('.container'))
+
+    	},
+
+    	renderLeaderboardPage: function(){
+
+    		ReactDOM.render(<LeaderboardPage />, document.querySelector('.container'))
 
     	}
 
   	})
 
-  new PongRouter
-  Backbone.history.start()
+	new PongRouter
+	Backbone.history.start()
 
 }
 
