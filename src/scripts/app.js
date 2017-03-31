@@ -10,7 +10,7 @@ import HomePage from './views/homepage.js'
 import LoginPage from './views/loginpage.js'
 import ProfilePage from './views/profilepage.js'
 import CreateGamePage from './views/creategamepage.js'
-import QueuePage from './views/queuepage.js'
+import QueuePage from './views/queuePage.js'
 import LeaderboardPage from './views/leaderboardpage.js'
 
 
