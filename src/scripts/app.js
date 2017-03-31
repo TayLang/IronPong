@@ -17,7 +17,6 @@ const app = function() {
   	let PongRouter = Backbone.Router.extend({
 
 	    routes: {
-
 	    	'home': 'renderHomePage',
 	    	'login': 'renderLoginPage',
 	    	'profile/:id': 'renderProfilePage',
@@ -54,12 +53,6 @@ const app = function() {
     	renderCreateGamePage: function(){
 
     		ReactDOM.render(<CreateGamePage />, document.querySelector('.container'))
-    	},
-
-    	renderQueuePage: function(){
-
-    		ReactDOM.render(<QueuePage />, document.querySelector('.container'))
-
     	},
 
     	renderLeaderboardPage: function(){
