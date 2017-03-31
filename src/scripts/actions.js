@@ -18,8 +18,8 @@ const ACTIONS = {
 				)
 	},
 
-	loginUser: function(formData) {
-		User.login(formData.email, formData.password) 
+	loginUser: function(email, password) {
+		User.login(email, password) 
 			.done(
 				function(response){
 					console.log('login success', response)
