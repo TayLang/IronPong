@@ -12,9 +12,7 @@ var QueuePage = React.createClass({
 				<NavBar />
 			</div>
 		)
-
 	}
-
 })
 
 export default QueuePage
