@@ -46,7 +46,7 @@ let User = require('../db/schema.js').User
     })
 
     // Routes for a Model(resource) should have this structure
-
+GIT FUCKED
     
 
 
