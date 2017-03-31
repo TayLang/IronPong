@@ -2,10 +2,10 @@ import React from 'react'
 import ACTIONS from '../../actions'
 
 var NavBar = React.createClass({
+	handleLogout: function () {
+		ACTIONS.logoutUser()
+	},
 	render: function() {
-		handleLogout: function() {
-			ACTIONS.logoutUser()
-		},
 		return(
 			<div className='navBar'>
 				<h1 className='pageHeader'>Iron Pong</h1>
