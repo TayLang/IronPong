@@ -44,6 +44,7 @@ const queueSchema = new mongoose.Schema({
 
 module.exports = {
   User: mongoose.model('User', usersSchema),
-  Game: mongoose.model('Game', gameSchema)
+  Game: mongoose.model('Game', gameSchema),
+  Queue: mongoose.model('Queue', queueSchema),
 }
 
