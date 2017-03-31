@@ -21,7 +21,7 @@ const app = function() {
 
 	    	'home': 'renderHomePage',
 	    	'queue': 'renderQueuePage',
-	    	'login/:id': 'renderLoginPage',
+	    	'login': 'renderLoginPage',
 	    	'profile/:id': 'renderProfilePage',
 	    	'leaderboard': 'renderLeaderboardPage',
 	    	'create_game': 'renderCreateGamePage',
