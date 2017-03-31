@@ -13,14 +13,14 @@ var NavBar = React.createClass({
 
 		return(
 
-			<div className='nav-bar-wrapper'>
-
-				<a href="/#home">Home</a>
-				<a href="/#queue">Game Queue</a>
-				<a href="/#leaderboard">Leaderboard</a>
-				<a href="/#profile">Profile</a>
-				<a href="/#login">Login</a>
-				<a href="/#logout">Logout</a>
+			<div className='navBar'>
+			
+				<h1 className='pageHeader'>Iron Pong</h1>
+				<a href="/#home"><div className="navButton">Home</div></a>
+				<a href="/#create_game"><div className='navButton'>Create new Game</div></a>
+				<a href="/#leaderboard"><div className='navButton'>Leaderboard</div></a>
+				<a href="/#profile"><div className='navButton'>Profile</div></a>
+				<a href='/#login' onClick={this.handleLogout} className='navButton'>Logout</a>
 
 			</div>
 
