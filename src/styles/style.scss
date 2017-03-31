@@ -2,10 +2,11 @@
 
 	font-family: 'Merriweather', serif;
 	box-sizing: border-box;
-	font-size: 16px;
+	font-size: 0;
 
 }
 
+$lh: 1.5rem;
 $mainFont: 'Merriweather', serif;
 $fontSizeHeading: 1.875rem;
 $fontSizeTitle: 1.5rem;
@@ -14,12 +15,30 @@ $fontSizeBody: 0.875rem;
 $colorDarkest: #233139;
 $colorBase: #727d84;
 $colorCallout: #6fbbb7;
-$colorTextOverDark: white;
+$colorOverDark: white;
+$colorOverLight: $colorDarkest;
+
+html{
+
+	font-size: 16px;
+
+}
+
+button {
+
+		font-size: $fontSizeSubtitle;
+		background: $colorCallout;
+		border: .2rem solid $colorOverDark;
+		border-radius: .1rem;
+		color: white;
+
+}
 
 h2 {
 
 	font-size: $fontSizeHeading;
 	font-family: $mainFont;
+	line-height: $lh * 2
 
 }
 
@@ -27,6 +46,7 @@ h3 {
 	
 	font-size: $fontSizeTitle;
 	font-family: $mainFont;
+	line-height: $lh * 2
 
 }
 
@@ -35,6 +55,7 @@ h4 {
 	font-size: $fontSizeSubtitle;
 	font-family: $mainFont;
 	font-style: italic;
+	line-height: $lh * 2
 
 }
 
@@ -42,6 +63,7 @@ p {
 	
 	font-size: $fontSizeBody;
 	font-family: $mainFont;
+	line-height: $lh * 1.2
 
 }
 
@@ -50,6 +72,8 @@ p {
 	background: $colorBase;
 
 	}
+
+
 
 .login-page-wrapper{
 
