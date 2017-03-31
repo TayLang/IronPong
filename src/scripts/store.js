@@ -1,11 +1,13 @@
 import Backbone from 'backbone'
-import {GameCollection} from './models/gameModel' 
+import {GameCollection} from './models/gameModel'
+import {UserCollection} from './models/userModel'
 
 
 
 const STORE = Object.assign({}, Backbone.Events, {
 	data: {
-		items: new GameCollection
+		items: new GameCollection,
+		userCollection: new UserCollection
 	},
 
 	get: function(prop){
