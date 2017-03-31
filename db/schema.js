@@ -10,11 +10,33 @@ const usersSchema = new mongoose.Schema({
   // x..x..x..x..x..x..x..x..x..x..x..x..x..x..x..x..x..x..x..x..x..x
   
    // example of optional fields
-  name:      { type: String },
-  createdAt: { type: Date, default: Date.now }
+  nickName: {type: String, required: true},
+  createdAt: { type: Date, default: Date.now },
+  wins: {type: Number},
+  losses: {type: Number},
+  winStreak: {type: Number, min: 5},
+  winRatio: {type: Number},
+  totalGames: {type: Number},
+  avatarURL: {type: String},
+  catchPhrase: {type: String},
+  paddleGripStyle: {type: String},
+  signatureMove: {type: String},
+  homeTown: {type: String},
+
+
+})
+
+const gameSchema = new mongoose.Schema({
+	playerOne: {type: String, required: true},
+	playerTwo: {type: String, required: true},
+	winner: {type: String, required: true},
+	loser: {type: String, required: true},
+	playerOneScore: {type: Number, required: true},
+	playerTwoScore: {type: Number, required: true}
 
 })
 
 module.exports = {
-  User: mongoose.model('User', usersSchema)
+  User: mongoose.model('User', usersSchema),
+  Game: mongoose.model('Game', gameSchema)
 }

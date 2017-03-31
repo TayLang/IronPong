@@ -2,6 +2,8 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import Backbone from 'backbone'
 import init from './init'
+import LoginView from './views/loginPage'
+import STORE from './store'
 
 //Pages imports
 import HomePage from './views/homepage.js'
@@ -13,8 +15,7 @@ import LeaderboardPage from './views/leaderboardpage.js'
 
 
 const app = function() {
-
-  	var PongRouter = Backbone.Router.extend({
+  	let PongRouter = Backbone.Router.extend({
 
 	    routes: {
 
@@ -73,7 +74,6 @@ const app = function() {
 
 	new PongRouter
 	Backbone.history.start()
-
 }
 
 // x..x..x..x..x..x..x..x..x..x..x..x..x..x..x..x..
