@@ -36,10 +36,11 @@ const gameSchema = new mongoose.Schema({
 })
 
 const queueSchema = new mongoose.Schema({
-    members: [{
-      type: mongoose.Schema.Types.ObjectId,
-      ref: 'User'
-  }]
+
+	members: [{
+		type: mongoose.Schema.Types.ObjectId,
+		ref: 'User'
+	}]
 })
 
 module.exports = {
