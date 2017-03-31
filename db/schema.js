@@ -35,6 +35,13 @@ const gameSchema = new mongoose.Schema({
 
 })
 
+const queueSchema = new mongoose.Schema({
+    members: [{
+      type: mongoose.Schema.Types.ObjectId,
+      ref: 'User'
+  }]
+})
+
 module.exports = {
   User: mongoose.model('User', usersSchema),
   Game: mongoose.model('Game', gameSchema)
