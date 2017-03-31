@@ -6,6 +6,9 @@ const mongoose = require('mongoose');
 const usersSchema = new mongoose.Schema({
   email:     { type: String, required: true },
   password:  { type: String, required: true },
+  // x..x..x..x..x..x..x..x..x..x..x..x..x..x..x..x..x..x..x..x..x..x
+  
+   // example of optional fields
   nickName: {type: String, required: true},
   createdAt: { type: Date, default: Date.now },
   wins: {type: Number},
