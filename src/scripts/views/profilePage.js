@@ -1,6 +1,7 @@
 import React from 'react'
 import ACTIONS from '../actions.js'
 import STORE from '../store.js'
+import NavBar from './components/navBar'
 
 var ProfilePage = React.createClass({
 
@@ -54,31 +55,8 @@ var StatsComponent = React.createClass({
 
 		return(
 
-			<div className = 'stats-wrapper'>
-
-				{this._makeStats(this.props.stats)}
-
-			</div>
-
-		)
-
-	}
-
-})
-
-var SingleStatComponent = React.createClass({
-
-	render: function(){
-
-		var stat = this.props.stat
-
-		return(
-
-			<div className = "single-stat-wrapper">
-
-				<h3>wins</h3>
-				<h4>{stat.wins}</h4>
-
+			<div className = 'profile-page-wrapper'>
+				<NavBar />
 			</div>
 
 		)
