@@ -6,14 +6,11 @@ const mongoose = require('mongoose');
 const usersSchema = new mongoose.Schema({
   email:     { type: String, required: true },
   password:  { type: String, required: true },
-  // x..x..x..x..x..x..x..x..x..x..x..x..x..x..x..x..x..x..x..x..x..x
-  
-   // example of optional fields
   nickName: {type: String},
   createdAt: { type: Date, default: Date.now },
   wins: {type: Number},
   losses: {type: Number},
-  winStreak: {type: Number, min: 5},
+  winStreak: {type: Number},
   winRatio: {type: Number},
   totalGames: {type: Number},
   avatarURL: {type: String},
