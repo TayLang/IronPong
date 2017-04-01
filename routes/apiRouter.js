@@ -71,10 +71,46 @@ apiRouter.get('/games', function(req, res){
 //--------------------------------------------------------
 
 apiRouter.get('/queue', function(req, res) {
-  Queue.find(req.query, "-password", function(err, record){
+  Queue.find(req.query, function(err, record){
     if(err) return res.status(400).json(`Problem getting queue from database`)
     res.json(record)
-  }).populate('members')
+  }).populate('queueMembers', "-password")
 })
+
+apiRouter.put('/queue/delete/:_id', function(req, res) {
+  Queue.find((err,records) => {
+    if (err) return res.status(500).json(`Problem getting the queue from database`)
+    
+    let ironQueue = records[0],
+    userIndex     = ironQueue.queueMembers.indexOf(req.params._id)
+
+    ironQueue.queueMembers.splice(userIndex, 1)
+    ironQueue.save((err, record) => {
+        if(err) return res.status(500).json(`Problem deleting user from database`)
+        res.json(record)
+    })
+  })
+})
+
+apiRouter.put('/queue/add/:_id', function(req, res) {
+  Queue.find((err, records) => {
+    if (err) return res.status(500).json(`Problem getting the queue from database`)
+    let ironQueue   = records[0],
+    isUserAlreadyIn = ironQueue.queueMembers.indexOf(req.params._id)
+    
+    if (isUserAlreadyIn !== -1 && ironQueue.queueMembers.length ) return res.status(400).json(`User already in the queue`)
+
+    User.findById(req.params._id, (err,userID) => {
+        if(err || userID === null) return res.status(500).json('Problem getting user from database')
+        ironQueue.queueMembers.push(userID)
+        ironQueue.save((err, record) => {
+            if(err) return res.status(500).json(`Problem adding user from database`)
+            res.json(record) 
+        })
+    })
+  })
+})
+
+
 
 module.exports = apiRouter

@@ -4,24 +4,22 @@ import Backbone from 'backbone'
 import init from './init'
 import LoginView from './views/loginPage'
 import STORE from './store'
+import ACTIONS from './actions'
 
 //Pages imports
 import HomePage from './views/homepage.js'
-import LoginPage from './views/loginpage.js'
-import ProfilePage from './views/profilepage.js'
-import CreateGamePage from './views/creategamepage.js'
-import QueuePage from './views/queuepage.js'
-import LeaderboardPage from './views/leaderboardpage.js'
+import LoginPage from './views/loginPage.js'
+import ProfilePage from './views/profilePage.js'
+import CreateGamePage from './views/createGamePage.js'
+import LeaderboardPage from './views/leaderboardPage.js'
 
 
 const app = function() {
   	let PongRouter = Backbone.Router.extend({
 
 	    routes: {
-
 	    	'home': 'renderHomePage',
-	    	'queue': 'renderQueuePage',
-	    	'login/:id': 'renderLoginPage',
+	    	'login': 'renderLoginPage',
 	    	'profile/:id': 'renderProfilePage',
 	    	'leaderboard': 'renderLeaderboardPage',
 	    	'create_game': 'renderCreateGamePage',
@@ -36,13 +34,13 @@ const app = function() {
 	    },
 
 	    renderHomePage: function(){
-
+	    	ACTIONS.loggedInStatus()
 	    	ReactDOM.render(<HomePage />, document.querySelector('.container'))
 
 	    },
 
 	    renderLoginPage: function(){
-
+	    	ACTIONS.loggedInStatus()
 	    	ReactDOM.render(<LoginPage />, document.querySelector('.container'))
 
 	    },
@@ -56,12 +54,6 @@ const app = function() {
     	renderCreateGamePage: function(){
 
     		ReactDOM.render(<CreateGamePage />, document.querySelector('.container'))
-    	},
-
-    	renderQueuePage: function(){
-
-    		ReactDOM.render(<QueuePage />, document.querySelector('.container'))
-
     	},
 
     	renderLeaderboardPage: function(){

@@ -30,19 +30,16 @@ const gameSchema = new mongoose.Schema({
 	playerTwo: {type: String, required: true},
 	winnerName: {type: String, required: true},
 	winnerID: {type: String, required: true},
-
 	loserName: {type: String, required:true},
 	loserID: {type: String, required:true},
-
 	playerOneScore: {type: Number, required: true},
 	playerTwoScore: {type: Number, required: true},
 	createdAt: { type: Date, default: Date.now }
-
 })
 
 const queueSchema = new mongoose.Schema({
 	members: [{
-		type: mongoose.Schema.Types.ObjectId,
+		type: any,
 		ref: 'User'
 	}]
 })

@@ -1,13 +1,19 @@
 import React from 'react'
 import ACTIONS from '../actions.js'
 import STORE from '../store.js'
+import Header from './components/header.js'
+import NavBar from './components/navBar'
 
 var LoginView = React.createClass({
 	render: function() {
 		return (
 			<div className='login-page-wrapper'>
-				<RegisterForm />
-				<LoginForm />
+				<Header />
+				<NavBar />
+				<div className='register-login-wrapper'>
+					<RegisterForm />
+					<LoginForm />
+				</div>
 			</div>
 		)
 	}
@@ -19,21 +25,24 @@ var LoginForm = React.createClass({
 		evtObj.preventDefault()
 		var formEl = evtObj.target
 		var formData = {
-			email: formEl.email.value,
-			password: formEl.password.value
+			email: formEl.email.value.toString(),
+			password: formEl.password.value.toString()
 		}
+		console.log(formEl)
+		ACTIONS.loginUser(formEl.email.value, formEl.password.value)
 		formEl.reset()
-		ACTIONS.loginUser(formData)
 	},
 
 	render: function() {
 		return (
 			<div className='form-wrapper login-form'>
-				<h2>Login Form</h2>
+				
 				<form onSubmit={this._handleSubmit}>
+					<div className = "form-title"><h3>Login</h3></div>
 					<input type='text' name='email' placeholder='enter your email' />
-					<input type='password' name='password' placeholder='create password' />
+					<input type='password' name='password' placeholder='enter password' />
 					<button type='submit'>Login</button>
+					<span className='loginEmailRejection emailRejection'></span>
 				</form>
 			</div>
 
@@ -51,21 +60,24 @@ var RegisterForm = React.createClass({
 			email: formEl.email.value,
 			password: formEl.password.value
 		}
-		console.log(formData)
-		formEl.reset()
 		ACTIONS.registerUser(formData)
+		console.log('logging in')
+		//formEl.reset()
 	},
 
 	render: function() {
 		return (
 			<div className='form-wrapper register-form'>
-			<h2>Register Form</h2>
-			<form onSubmit={this._handleSubmit}>
-				<input type='text' name='userName' placeholder='enter username' />
-				<input type='text' name='email' placeholder='enter your email' />
-				<input type='password' name='password' placeholder='create password' />
-				<button type='submit'>Register</button>
-			</form>
+		
+				<form onSubmit={this._handleSubmit}>
+					<div className = "form-title"><h3>Register</h3></div>
+					<input type='text' name='userName' placeholder='enter username' />
+					<input type='text' name='email' placeholder='enter your email' />
+					<input type='password' name='password' placeholder='create a password' />
+					<button type='submit'>Register</button>
+					<span className='registerEmailRejection emailRejection'/>
+				</form>
+
 			</div>
 		)
 	}
