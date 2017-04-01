@@ -6,7 +6,7 @@ const mongoose = require('mongoose');
 const usersSchema = new mongoose.Schema({
   email:     { type: String, required: true },
   password:  { type: String, required: true },
-  nickName: {type: String},
+  nickName: {type: String, required: true},
   createdAt: { type: Date, default: Date.now },
   wins: {type: Number},
   losses: {type: Number},

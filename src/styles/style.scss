@@ -69,6 +69,19 @@ p {
 
 }
 
+.reclaim-button {
+	margin: 10px;
+	display: block;
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%);
+
+}
+
+button:hover, a:hover {
+	cursor: pointer;
+}
+
 @media (min-width: 700px) { 
 
 
@@ -207,7 +220,13 @@ p {
 
 @media (max-width: 699px){
 
+	.register-login-wrapper{
+		text-align: center;
+	}
 
+	.reclaim-button{
+		display: block;
+	}
 
 	.header-wrapper{
 
@@ -402,6 +421,5 @@ p {
 		background: $colorBase;
 
 		}
-
 	}
 
