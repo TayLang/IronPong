@@ -53,9 +53,21 @@ let Queue = require('../db/schema').Queue
 
 apiRouter.post('/games', function(req, res) {
   let newGame = new Game(req.body)
-  newGame.save((err, record) => {
+  newGame.save((err, gameRecord) => {
     if(err) return res.status(500).json(`Problem saving game to database`)
-    res.json(record)
+
+    Queue.find((err,queueRecords) => {
+      if (err) return res.status(500).json(`Problem getting the queue from database`)
+
+      let ironQueue = queueRecords[0],
+      userIndex     = ironQueue.queueMembers.indexOf(req.body.loser)
+      ironQueue.queueMembers.splice(userIndex,1)
+      
+      ironQueue.save((err, record) => {
+        if(err) return res.status(500).json(`Problem deleting user from database`)
+      })
+    })
+   res.json(gameRecord)
   })
 })
 
