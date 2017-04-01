@@ -17,6 +17,7 @@ $colorBase: #727d84;
 $colorCallout: #6fbbb7;
 $colorOverDark: white;
 $colorOverLight: $colorDarkest;
+$colorReject: red;	
 
 html{
 
@@ -162,7 +163,7 @@ p {
 
 				span{
 
-					color: $colorOverDark;
+					color: $colorReject;
 					display: block;
 					font-size: 1rem;
 					margin: .5rem;
@@ -205,6 +206,8 @@ p {
 }
 
 @media (max-width: 699px){
+
+
 
 	.header-wrapper{
 
@@ -301,6 +304,84 @@ p {
 	.profile-page-wrapper{
 
 		background: $colorBase;
+
+		.profile-stats-wrapper{
+
+			border-radius: 12px;
+				padding: .2rem;
+				margin: .8rem;
+				
+				h3{	
+					border-radius: 12px;
+					color: white;
+					margin: .2rem;
+					padding-left: .5rem;
+					padding-top: .1rem;
+					background: $colorDarkest;
+				}
+
+				h4{	
+					border-radius: 12px;
+					color: white;
+					margin: .2rem;
+					padding-left: .5rem;
+					padding-top: .1rem;
+					background: $colorDarkest;
+				}
+
+				background: none;
+				border: .2rem solid $colorBase;
+			
+
+		}
+
+		.recent-games-wrapper{
+
+			h2{
+				margin-top: 0;
+				padding-top: 0;
+				color: white;
+				padding-bottom: 0;
+			}
+
+			.game-snapshot-wrapper{
+
+				border-radius: 12px;
+				padding: .2rem;
+				margin: .8rem;
+				
+				h3{	
+					border-radius: 12px;
+					color: white;
+					margin: .2rem;
+					padding-left: .5rem;
+					padding-top: .1rem;
+					background: $colorBase;
+				}
+
+				h4{	
+					border-radius: 12px;
+					color: white;
+					margin: .2rem;
+					padding-left: .5rem;
+					padding-top: .1rem;
+					background: $colorBase;
+				}
+
+				background: none;
+				border: .2rem solid $colorBase;
+			}
+
+			padding: 1rem;
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+			margin-top: 1rem;
+			margin-bottom: 1rem;
+			width: 80vw;
+			background: $colorDarkest;
+
+		}
 
 		}
 
