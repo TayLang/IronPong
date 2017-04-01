@@ -215,7 +215,9 @@ button:hover, a:hover {
 
 @media (max-width: 699px){
 
-
+	.register-login-wrapper{
+		text-align: center;
+	}
 
 	.header-wrapper{
 
@@ -410,6 +412,5 @@ button:hover, a:hover {
 		background: $colorBase;
 
 		}
-
 	}
 
