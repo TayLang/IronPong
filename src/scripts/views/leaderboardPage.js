@@ -27,9 +27,9 @@ var LeaderboardPage = React.createClass({
 
 var LeaderboardDisplay = React.createClass({
 	render: function() {
-		return(
+		// return(
 			
-		)
+		// )
 	}
 })
 
