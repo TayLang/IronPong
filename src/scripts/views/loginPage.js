@@ -13,6 +13,7 @@ var LoginView = React.createClass({
 				<div className='register-login-wrapper'>
 					<RegisterForm />
 					<LoginForm />
+					<ReclaimButton />
 				</div>
 			</div>
 		)
@@ -36,7 +37,6 @@ var LoginForm = React.createClass({
 	render: function() {
 		return (
 			<div className='form-wrapper login-form'>
-				
 				<form onSubmit={this._handleSubmit}>
 					<div className = "form-title"><h3>Login</h3></div>
 					<input type='text' name='email' placeholder='enter your email' />
@@ -62,23 +62,29 @@ var RegisterForm = React.createClass({
 		}
 		ACTIONS.registerUser(formData)
 		console.log('logging in')
-		//formEl.reset()
+		formEl.reset()
 	},
 
 	render: function() {
 		return (
 			<div className='form-wrapper register-form'>
-			<h2>Register Form</h2>
 			<form onSubmit={this._handleSubmit}>
+				<h3>Register Form</h3>
 				<input type='text' name='userName' placeholder='enter username' /><br /><br />
-				<input type='text' name='email' placeholder='enter your email' />
-				<span className='registerEmailRejection emailRejection'></span><br /><br />
+				<input type='text' name='email' placeholder='enter your email' /><br /><br />
 				<input type='password' name='password' placeholder='create a password' /><br /><br />
 				<button type='submit'>Register</button><br /><br />
-				<a href="/#reclaim"><div className="reclaimButton">Click Here To Reclaim Your Old Account</div></a>
-
+				<span className='registerEmailRejection emailRejection'></span><br />
 			</form>
 			</div>
+		)
+	}
+})
+
+var ReclaimButton = React.createClass({
+	render: function() {
+		return (
+			<a href='#reclaim'><button className='reclaim-button'>Reclaim Old Account</button></a>
 		)
 	}
 })
