@@ -68,7 +68,9 @@ var RegisterForm = React.createClass({
 				<input type='text' name='email' placeholder='enter your email' />
 				<span className='registerEmailRejection emailRejection'></span><br /><br />
 				<input type='password' name='password' placeholder='create a password' /><br /><br />
-				<button type='submit'>Register</button>
+				<button type='submit'>Register</button><br /><br />
+				<a href="/#reclaim"><div className="reclaimButton">Click Here To Reclaim Your Old Account</div></a>
+
 			</form>
 			</div>
 		)

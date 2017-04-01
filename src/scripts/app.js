@@ -11,6 +11,7 @@ import LoginPage from './views/loginPage.js'
 import ProfilePage from './views/profilePage.js'
 import CreateGamePage from './views/createGamePage.js'
 import LeaderboardPage from './views/leaderboardPage.js'
+import ReclaimPage from './views/reclaimPage.js'
 
 
 const app = function() {
@@ -22,6 +23,7 @@ const app = function() {
 	    	'profile/:id': 'renderProfilePage',
 	    	'leaderboard': 'renderLeaderboardPage',
 	    	'create_game': 'renderCreateGamePage',
+	    	'reclaim': 'renderReclaimPage',
 	    	'*default': 'handleRedirect',
 
 	    },
@@ -58,6 +60,12 @@ const app = function() {
     	renderLeaderboardPage: function(){
 
     		ReactDOM.render(<LeaderboardPage />, document.querySelector('.container'))
+
+    	},
+
+    	renderReclaimPage: function(){
+
+    		ReactDOM.render(<ReclaimPage />, document.querySelector('.container'))
 
     	}
 
