@@ -13,7 +13,7 @@ const usersSchema = new mongoose.Schema({
   createdAt: { type: Date, default: Date.now },
   wins: {type: Number},
   losses: {type: Number},
-  winStreak: {type: Number, min: 5},
+  winStreak: {type: Number},
   winRatio: {type: Number},
   totalGames: {type: Number},
   avatarURL: {type: String},
