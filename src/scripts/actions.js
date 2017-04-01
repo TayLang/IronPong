@@ -1,6 +1,6 @@
 import React from 'react'
 import User from './models/userModel.js'
-
+import STORE from './store'
 const ACTIONS = {
 
 	registerUser: function(formData) {
