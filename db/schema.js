@@ -39,7 +39,7 @@ const gameSchema = new mongoose.Schema({
 
 const queueSchema = new mongoose.Schema({
 	members: [{
-		type: any,
+		type: ,
 		ref: 'User'
 	}]
 })
