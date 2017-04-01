@@ -26,7 +26,7 @@ const app = function() {
 	    	'leaderboard': 'renderLeaderboardPage',
 	    	'create_game': 'renderCreateGamePage',
 	    	'reclaim': 'renderReclaimPage',
-	    	'queue': 'renderQueuePage',
+	    	'queue/:id': 'renderQueuePage',
 	    	'*default': 'handleRedirect',
 
 	    },
