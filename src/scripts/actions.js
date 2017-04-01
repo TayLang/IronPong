@@ -1,5 +1,6 @@
 import React from 'react'
 import User from './models/userModel.js'
+import STORE from './store.js'
 
 const ACTIONS = {
 
@@ -23,6 +24,7 @@ const ACTIONS = {
 			.done(
 				function(response){
 					console.log('login success', response)
+					ACTIONS.loggedInStatus()
 					location.hash = 'home'
 				}
 				)
@@ -38,14 +40,36 @@ const ACTIONS = {
 			.done(
 				function(response) {
 					console.log('you logged out', response)
+					ACTIONS.loggedInStatus()
 					location.hash = 'login'
 				})
 			.fail(
 				function(error) {
 					console.log('problem logging out', error)
 				})
+	},
+
+	loggedInStatus: function(){
+		console.log(User.getCurrentUser())
+		if(User.getCurrentUser() != null){
+
+			STORE.set({userLoginStatus: 'Log Out'})
+			console.log(STORE.data.userLoginStatus)
+
+			return 'Log Out'
+		}
+
+		else{
+
+			STORE.set({userLoginStatus: 'Log In'})
+			console.log(STORE.data.userLoginStatus)
+
+			return 'Log In'
+		}
 	}
 
 }
+
+ACTIONS.loggedInStatus()
 
 export default ACTIONS

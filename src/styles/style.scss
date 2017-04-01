@@ -21,6 +21,7 @@ $colorOverLight: $colorDarkest;
 html{
 
 	font-size: 16px;
+	background: $colorDarkest;
 
 }
 
@@ -32,7 +33,7 @@ button {
 		border-radius: .1rem;
 		color: white;
 
-}
+	}
 
 h2 {
 
@@ -67,55 +68,238 @@ p {
 
 }
 
-.nav-bar-wrapper{
+@media (min-width: 700px) { 
 
-	background: $colorDarkest;
-	a{	
-		
-		font-size: $fontSizeBody;
-		color: $colorOverDark;
-		padding: .5rem;
+
+	.header-wrapper{
+
+		background: $colorCallout;
+
+		img {
+			max-width: 100%;
+			width: 16rem;
+			text-align: center;
+			vertical-align: center;
+			margin: auto;
+			padding: .8rem;
+		}
 	}
+
+	.nav-bar-wrapper{
+
+		background: $colorDarkest;
+		
+		padding: .8rem;
+
+		a{	
+			text-decoration:none;
+			text-underline-position: none;
+			font-size: $fontSizeBody;
+			font-style: italic;
+			color: $colorOverDark;
+			margin: .5rem;
+		}
+	}
+
+	.home-page-wrapper{		
+
+		background: $colorBase;
+		padding: 0;
+		margin: 0;
+
+		}
+
+	.login-page-wrapper{
+
+		.register-login-wrapper{
+
+			text-align: center;
+
+			.form-wrapper{
+
+				display: inline-block;
+				width: 40%;
+				vertical-align: top;
+
+				margin-top: .5rem;
+				margin-bottom: .5rem;
+				margin-left: .5rem;
+				margin-right: .5rem;
+
+				h3{
+					color: $colorOverDark;
+					line-height: $lh;
+				}
+
+				form{
+					height: 50vh;
+					display: block;
+					padding: .6rem;
+					background: $colorDarkest;
+					vertical-align: center;
+					margin: auto;
+					
+					text-align: center;
+
+				}
+
+				input{
+
+					width: 90%;
+					padding: .5rem;
+					margin-top: .5rem;
+					margin-bottom: .5rem;
+					margin-left: auto;
+					margin-right: auto;
+					vertical-align: center;
+					display: block;
+					font-size: $fontSizeBody;
+
+				}
+
+		}
+
+		}
+
+		background: $colorBase;
+
+		}
+
+	.profile-page-wrapper{
+
+		background: $colorBase;
+
+		}
+
+	.queue-page-wrapper{
+
+		background: $colorBase;
+
+		}
+
+	.leaderboard-page-wrapper{
+
+		background: $colorBase;
+
+		}
+
+	.create-game-page-wrapper{
+
+		background: $colorBase;
+
+		}
+
 }
 
-.home-page-wrapper{		
+@media (max-width: 700px){
 
-	background: $colorBase;
+	.header-wrapper{
 
+		background: $colorCallout;
+
+		img {
+			max-width: 100%;
+			width: 16rem;
+			text-align: center;
+			vertical-align: center;
+			margin: auto;
+			padding: .8rem;
+		}
 	}
 
+	.nav-bar-wrapper{
 
+		background: $colorDarkest;
+		
+		padding: .8rem;
 
-.login-page-wrapper{
-
-	input{
-		font-size: 10px;
+		a{	
+			text-decoration:none;
+			text-underline-position: none;
+			font-size: $fontSizeBody;
+			font-style: italic;
+			color: $colorOverDark;
+			margin: .5rem;
+		}
 	}
 
-	background: $colorBase;
+	.home-page-wrapper{		
 
-	}
+		background: $colorBase;
+		padding: 0;
+		margin: 0;
 
-.profile-page-wrapper{
+		}
 
-	background: $colorBase;
+	.login-page-wrapper{
 
-	}
+		.form-wrapper{
 
-.queue-page-wrapper{
+			h3{
+				color: $colorOverDark;
+				line-height: $lh;
+			}
 
-	background: $colorBase;
+			margin-top: .5rem;
+			margin-bottom: .5rem;
+			margin-left: auto;
+			margin-right: auto;
 
-	}
+			form{
 
-.leaderboard-page-wrapper{
+				display: block;
+				padding: .6rem;
+				background: $colorDarkest;
+				vertical-align: center;
+				margin: auto;
+				width: 50vw;
+				text-align: center;
 
-	background: $colorBase;
+			}
 
-	}
+			input{
 
-.create-game-page-wrapper{
+				width: 90%;
+				padding: .5rem;
+				margin-top: .5rem;
+				margin-bottom: .5rem;
+				margin-left: auto;
+				margin-right: auto;
+				vertical-align: center;
+				display: block;
+				font-size: $fontSizeBody;
 
-	background: $colorBase;
+			}
 
-	}
+		}
+
+		background: $colorBase;
+
+		}
+
+	.profile-page-wrapper{
+
+		background: $colorBase;
+
+		}
+
+	.queue-page-wrapper{
+
+		background: $colorBase;
+
+		}
+
+	.leaderboard-page-wrapper{
+
+		background: $colorBase;
+
+		}
+
+	.create-game-page-wrapper{
+
+		background: $colorBase;
+
+		}
+
+
+}

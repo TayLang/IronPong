@@ -4,8 +4,12 @@ import {GameCollection} from './models/gameModel'
 
 
 const STORE = Object.assign({}, Backbone.Events, {
+
 	data: {
-		items: new GameCollection
+
+		items: new GameCollection,
+		userLoginStatus: 'Log In'
+
 	},
 
 	get: function(prop){
@@ -15,7 +19,8 @@ const STORE = Object.assign({}, Backbone.Events, {
 			return this.data[prop]
 	},
 
-	set: function(){
+	set: function(attrs){
+		this.data = Object.assign(this.data,attrs)
 		this.trigger('dataUpdated')
 	},
 
