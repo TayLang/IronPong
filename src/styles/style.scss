@@ -71,6 +71,11 @@ p {
 
 .reclaim-button {
 	margin: 10px;
+	display: block;
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%);
+
 }
 
 button:hover, a:hover {
@@ -217,6 +222,10 @@ button:hover, a:hover {
 
 	.register-login-wrapper{
 		text-align: center;
+	}
+
+	.reclaim-button{
+		display: block;
 	}
 
 	.header-wrapper{
