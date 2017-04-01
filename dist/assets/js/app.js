@@ -1,1 +1,1 @@
-console.error("SyntaxError: /Users/akirkpatrick100/Documents/TIY/assignments/IronPong/src/scripts/views/leaderboardPage.js: Unexpected token, expected , (39:2) while parsing file: /Users/akirkpatrick100/Documents/TIY/assignments/IronPong/src/scripts/views/leaderboardPage.js");
+console.error("SyntaxError: /Users/denis/Projects/TIY/Projects/IronPong/src/scripts/views/leaderboardPage.js: Unexpected token, expected , (39:2) while parsing file: /Users/denis/Projects/TIY/Projects/IronPong/src/scripts/views/leaderboardPage.js");
