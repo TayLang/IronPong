@@ -187,6 +187,10 @@ p {
 
 	.queue-page-wrapper{
 
+		th,td{
+			font-size: $fontSizeBody;
+		}
+
 		background: $colorBase;
 
 		}
