@@ -86,6 +86,19 @@ const ACTIONS = {
 					userCollection: userColl
 				})
 			})
+	},
+
+	fetchQueue: function(){
+		var queueColl = STORE.get('queueCollection')
+		queueColl.fetch()
+
+			.then(function() {
+					console.log(queueColl)
+				STORE.set({
+
+					queueCollection: queueColl
+				})
+			})
 	}
 
 }
