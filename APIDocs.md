@@ -146,8 +146,8 @@ Required fields
 ```
 {
 	//You can get these IDs from the Queue
-	playerOneID: {type: String},
-    playerTwoID: {type: String}, 
+	playerOne: {type: String}, //Note: this is the _id  for playerOne, don't enter a name
+  playerTwo: {type: String}, //Note: this is the _id  for playerOne, don't enter a name
     
 	winnerID: {type: String, required: true},
 	loserID: {type: String, required: true},
