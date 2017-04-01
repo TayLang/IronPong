@@ -39,7 +39,7 @@ var LoginForm = React.createClass({
 			<div className='form-wrapper login-form'>
 				<form onSubmit={this._handleSubmit}>
 					<div className = "form-title"><h3>Login</h3></div>
-					<input type='text' name='email' placeholder='enter your email' />
+					<input type='text' name='email' placeholder='enter your email' /><br /><br />
 					<input type='password' name='password' placeholder='enter password' />
 					<button type='submit'>Login</button>
 					<span className='loginEmailRejection emailRejection'></span>
