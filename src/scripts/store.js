@@ -9,9 +9,8 @@ const STORE = Object.assign({}, Backbone.Events, {
 	data: {
 
 		items: new GameCollection,
-		userLoginStatus: 'Log In',
-		items: new GameCollection,
-		userCollection: new UserCollection
+		userCollection: new UserCollection,
+		userLoginStatus: 'Log In'
 
 	},
 
