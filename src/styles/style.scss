@@ -76,13 +76,16 @@ p {
 		background: $colorCallout;
 
 		img {
+
 			max-width: 100%;
 			width: 16rem;
 			text-align: center;
 			vertical-align: center;
 			margin: auto;
 			padding: .8rem;
+
 		}
+
 	}
 
 	.nav-bar-wrapper{
@@ -154,6 +157,16 @@ p {
 					vertical-align: center;
 					display: block;
 					font-size: $fontSizeBody;
+
+				}
+
+				span{
+
+					color: $colorOverDark;
+					display: block;
+					font-size: 1rem;
+					margin: .5rem;
+					padding:.5rem;
 
 				}
 
@@ -271,6 +284,14 @@ p {
 
 			}
 
+			.emailRejection {
+
+				font-size: $fontSizeBody;
+				color: darkred;
+				font-style: italic;
+
+			}
+
 		}
 
 		background: $colorBase;
@@ -301,5 +322,5 @@ p {
 
 		}
 
+	}
 
-}

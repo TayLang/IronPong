@@ -65,4 +65,12 @@ const User = UserAuthModel.extend({
 	}
 })
 
+export var UserCollection = Backbone.Collection.extend({
+	comparator: function(mod) {
+		return mod.get('winRatio') * -1
+	},
+	model: User,
+	url: '/api/users'
+})
+
 export default User

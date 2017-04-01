@@ -42,6 +42,7 @@ var LoginForm = React.createClass({
 					<input type='text' name='email' placeholder='enter your email' />
 					<input type='password' name='password' placeholder='enter password' />
 					<button type='submit'>Login</button>
+					<span className='loginEmailRejection emailRejection'></span>
 				</form>
 			</div>
 
@@ -60,7 +61,8 @@ var RegisterForm = React.createClass({
 			password: formEl.password.value
 		}
 		ACTIONS.registerUser(formData)
-		formEl.reset()
+		console.log('logging in')
+		//formEl.reset()
 	},
 
 	render: function() {
@@ -73,7 +75,9 @@ var RegisterForm = React.createClass({
 					<input type='text' name='email' placeholder='enter your email' />
 					<input type='password' name='password' placeholder='create a password' />
 					<button type='submit'>Register</button>
+					<span className='registerEmailRejection emailRejection'/>
 				</form>
+
 			</div>
 		)
 	}
