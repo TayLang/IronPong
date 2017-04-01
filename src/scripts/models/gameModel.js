@@ -15,7 +15,7 @@ export const GameCollection = Backbone.Collection.extend({
 
 export const QueueCollection = Backbone.Collection.extend({
 	idAttribute: '_id',
-	url:'https://iron-pong.herokuapp.com/API/queue',
+	url:'/api/queue',
 	parse: function(apiResponse){
 		console.log(apiResponse)
 		return apiResponse[0].queueMembers
