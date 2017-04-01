@@ -68,7 +68,6 @@ var RegisterForm = React.createClass({
 	render: function() {
 		return (
 			<div className='form-wrapper register-form'>
-<<<<<<< HEAD
 			<h2>Register Form</h2>
 			<form onSubmit={this._handleSubmit}>
 				<input type='text' name='userName' placeholder='enter username' /><br /><br />
@@ -79,18 +78,6 @@ var RegisterForm = React.createClass({
 				<a href="/#reclaim"><div className="reclaimButton">Click Here To Reclaim Your Old Account</div></a>
 
 			</form>
-=======
-		
-				<form onSubmit={this._handleSubmit}>
-					<div className = "form-title"><h3>Register</h3></div>
-					<input type='text' name='userName' placeholder='enter username' />
-					<input type='text' name='email' placeholder='enter your email' />
-					<input type='password' name='password' placeholder='create a password' />
-					<button type='submit'>Register</button>
-					<span className='registerEmailRejection emailRejection'/>
-				</form>
-
->>>>>>> 4d49e8357488d68b260999268744a2f4ba7b057f
 			</div>
 		)
 	}
