@@ -34,7 +34,7 @@ var LeaderboardDisplay = React.createClass({
 
 		users = users.sort( function(a, b) {
 			return b.get("winRatio") - a.get("winRatio")
-		}
+		})
 		
 		return(
 			<div>
