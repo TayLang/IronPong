@@ -21,10 +21,14 @@ const QueuePage = React.createClass({
 	},
 	render: function(){
 		return(
-			<div className = 'queue-page-wrapper'>
-				<Header />
-				<NavBar />
-				<Queue queueCollection={this.state.queueCollection} />
+			<div>
+				<div className = 'queue-page-wrapper'>
+					<Header />
+					<NavBar />
+					<Queue queueCollection={this.state.queueCollection} />
+				</div>
+				<button onClick={ACTIONS.addUserToQueue}>Add me to the queue</button>
+				<button onClick={ACTIONS.removeUserFromQueue}>Remove me from the queue</button>
 			</div>
 		)
 	}
