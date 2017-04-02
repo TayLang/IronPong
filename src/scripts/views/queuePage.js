@@ -20,6 +20,14 @@ const QueuePage = React.createClass({
 		return STORE.data
 	},
 	render: function(){
+		let buttons=null
+		if(this.state.userLoginStatus === 'Log Out'){
+			buttons= 
+					<div>
+						<button onClick={ACTIONS.addUserToQueue}>Add me to the queue</button>
+						<button onClick={ACTIONS.removeUserFromQueue}>Remove me from the queue</button>
+					</div> 
+		}
 		return(
 			<div>
 				<div className = 'queue-page-wrapper'>
@@ -27,8 +35,7 @@ const QueuePage = React.createClass({
 					<NavBar />
 					<Queue queueCollection={this.state.queueCollection} />
 				</div>
-				<button onClick={ACTIONS.addUserToQueue}>Add me to the queue</button>
-				<button onClick={ACTIONS.removeUserFromQueue}>Remove me from the queue</button>
+				{buttons}
 			</div>
 		)
 	}
