@@ -43,11 +43,11 @@ var Rules = React.createClass({
 				However, if a score of 20-20 is reached in any game, then each server 
 				serves only one point and then the server is switched.</h4>
 				<h3>Legal Serve</h3>
-				<h4>Serve however you'd like, as long as the ball it hit behind the edge
+				<h4>Serve however you'd like, as long as the ball is hit behind the edge
 				of the table nearest the server. If the serve touches the net and remains on
 				the server's side of the table, it is a point for the returning player. If the 
 				serve touches the net and hits the opposing side of the table, it is a 'let'.
-				Three consecutive 'lets' are an instant point for the opposing player.</h4>
+				Three consecutive 'lets' are an instant point for the returning player.</h4>
 			</div>
 		)
 	}
