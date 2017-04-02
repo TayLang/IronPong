@@ -1,13 +1,19 @@
 import Backbone from 'backbone'
 import {GameCollection} from './models/gameModel'
 import {UserCollection} from './models/userModel'
+import {QueueCollection} from './models/gameModel'
 
 
 
 const STORE = Object.assign({}, Backbone.Events, {
+
 	data: {
+
 		items: new GameCollection,
-		userCollection: new UserCollection
+		userCollection: new UserCollection,
+		queueCollection: new QueueCollection,
+		userLoginStatus: 'Log In'
+
 	},
 
 	get: function(prop){
@@ -17,7 +23,8 @@ const STORE = Object.assign({}, Backbone.Events, {
 			return this.data[prop]
 	},
 
-	set: function(){
+	set: function(attrs){
+		this.data = Object.assign(this.data,attrs)
 		this.trigger('dataUpdated')
 	},
 

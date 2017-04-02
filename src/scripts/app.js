@@ -4,6 +4,7 @@ import Backbone from 'backbone'
 import init from './init'
 import LoginView from './views/loginPage'
 import STORE from './store'
+import ACTIONS from './actions'
 
 //Pages imports
 import HomePage from './views/homepage.js'
@@ -11,6 +12,8 @@ import LoginPage from './views/loginPage.js'
 import ProfilePage from './views/profilePage.js'
 import CreateGamePage from './views/createGamePage.js'
 import LeaderboardPage from './views/leaderboardPage.js'
+import ReclaimPage from './views/reclaimPage.js'
+import QueuePage from './views/queuePage.js'
 
 
 const app = function() {
@@ -22,6 +25,8 @@ const app = function() {
 	    	'profile/:id': 'renderProfilePage',
 	    	'leaderboard': 'renderLeaderboardPage',
 	    	'create_game': 'renderCreateGamePage',
+	    	'reclaim': 'renderReclaimPage',
+	    	'queue': 'renderQueuePage',
 	    	'*default': 'handleRedirect',
 
 	    },
@@ -33,13 +38,13 @@ const app = function() {
 	    },
 
 	    renderHomePage: function(){
-
+	    	ACTIONS.loggedInStatus()
 	    	ReactDOM.render(<HomePage />, document.querySelector('.container'))
 
 	    },
 
 	    renderLoginPage: function(){
-
+	    	ACTIONS.loggedInStatus()
 	    	ReactDOM.render(<LoginPage />, document.querySelector('.container'))
 
 	    },
@@ -58,6 +63,18 @@ const app = function() {
     	renderLeaderboardPage: function(){
 
     		ReactDOM.render(<LeaderboardPage />, document.querySelector('.container'))
+
+    	},
+
+    	renderReclaimPage: function(){
+
+    		ReactDOM.render(<ReclaimPage />, document.querySelector('.container'))
+
+    	},
+
+    	renderQueuePage: function(){
+
+    		ReactDOM.render(<QueuePage />, document.querySelector('.container'))
 
     	}
 
