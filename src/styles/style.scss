@@ -78,6 +78,28 @@ p {
 
 }
 
+.faq-page {
+	color: white;
+	text-align: center;
+}
+
+.etiquette {
+	margin-top: 50px;
+}
+
+.rules {
+	border: 2px solid black;
+	background: $colorCallout;
+}
+
+.rules h4 {
+	color: $colorDarkest;
+}
+
+.rules h3 {
+	text-shadow: 2px 2px grey;
+}
+
 button:hover, a:hover {
 	cursor: pointer;
 }
