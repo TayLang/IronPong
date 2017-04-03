@@ -115,12 +115,16 @@ apiRouter.put('/queue/delete/:_id', function(req, res) {
     
     let ironQueue = records[0],
     userIndex     = ironQueue.queueMembers.indexOf(req.params._id)
-
-    ironQueue.queueMembers.splice(userIndex, 1)
-    ironQueue.save((err, record) => {
-        if(err) return res.status(500).json(`Problem deleting user from database`)
-        res.json(record)
-    })
+    if(userIndex !== -1 ){
+      ironQueue.queueMembers.splice(userIndex, 1)
+      ironQueue.save((err, record) => {
+          if(err) return res.status(500).json(`Problem deleting user from database`)
+          res.json(record)
+      })
+    }
+    else{
+      return res.status(400).json(`Invalid user id`)
+    }
   })
 })
 

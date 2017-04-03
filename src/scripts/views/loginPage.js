@@ -56,7 +56,7 @@ var RegisterForm = React.createClass({
 		evtObj.preventDefault()
 		var formEl = evtObj.target
 		var formData = {
-			name: formEl.userName.value,
+			nickName: formEl.userName.value,
 			email: formEl.email.value,
 			password: formEl.password.value
 		}
@@ -72,8 +72,8 @@ var RegisterForm = React.createClass({
 				<h3>Register Form</h3>
 				<input type='text' name='userName' placeholder='enter username' /><br /><br />
 				<input type='text' name='email' placeholder='enter your email' /><br /><br />
-				<input type='password' name='password' placeholder='create a password' /><br /><br />
-				<button type='submit'>Register</button><br /><br />
+				<input type='password' name='password' placeholder='create a password' />
+				<button type='submit'>Register</button>
 				<span className='registerEmailRejection emailRejection'></span><br />
 			</form>
 			</div>

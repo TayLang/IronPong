@@ -6,7 +6,7 @@ const mongoose = require('mongoose');
 const usersSchema = new mongoose.Schema({
   email:     { type: String, required: true },
   password:  { type: String, required: true },
-  nickName: {type: String, required: true},
+  nickName: {type: String, required:true },
   createdAt: { type: Date, default: Date.now },
   wins: {type: Number,default:0},
   losses: {type: Number,default:0},
@@ -17,7 +17,8 @@ const usersSchema = new mongoose.Schema({
   catchPhrase: {type: String},
   paddleGripStyle: {type: String},
   signatureMove: {type: String},
-  homeTown: {type: String}
+  homeTown: {type: String},
+  claimed: {type:Boolean, default: true}
 })
 
 const gameSchema = new mongoose.Schema({

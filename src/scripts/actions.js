@@ -1,6 +1,7 @@
 import React from 'react'
 import User from './models/userModel.js'
 import STORE from './store.js'
+import $ from 'jquery'
 
 const ACTIONS = {
 
@@ -99,8 +100,37 @@ const ACTIONS = {
 					queueCollection: queueColl
 				})
 			})
-	}
+	},
 
+	addUserToQueue: function() {
+		let userId = User.getCurrentUser().get('_id')
+		$.ajax({
+			method: 'PUT',
+			type: 'json',
+			url: `api/queue/add/${userId}`,
+		})
+		.done(()=>{
+			ACTIONS.fetchQueue()
+		})
+		.fail((err)=>{
+			alert(err.responseText)
+		})
+	},
+
+	removeUserFromQueue: function() {
+		let userId = User.getCurrentUser().get('_id')
+		$.ajax({
+			method: 'PUT',
+			type: 'json',
+			url: `api/queue/delete/${userId}`,
+		})
+		.done(()=>{
+			ACTIONS.fetchQueue()
+		})
+		.fail((err)=>{
+			alert(err.responseText)
+		})
+	}
 }
 
 ACTIONS.loggedInStatus()
